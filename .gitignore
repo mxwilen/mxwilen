@@ -1,7 +1,7 @@
 # Flutter generated files
 .dart_tool/
 .packages
-# build/
+build/
 flutter_*.json
 pubspec.lock
 

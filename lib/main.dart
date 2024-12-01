@@ -12,15 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'CLI Portfolio',
+      title: "Hi! I'm Max:)",
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black,
         scaffoldBackgroundColor: Colors.black,
         useMaterial3: true,
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.green, fontFamily: 'Courier'),
-        ),
       ),
       home: const HomePage(),
     );
@@ -40,6 +37,8 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController _controller = TextEditingController();
   final ScrollController _scrollController = ScrollController();
 
+  String currentPath = '/max/welcome';
+
   @override
   void initState() {
     super.initState();
@@ -47,6 +46,8 @@ class _HomePageState extends State<HomePage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _focusNode.requestFocus();
     });
+
+    _outputs.add('uhefhsfihsuifsihf');
   }
 
   @override
@@ -59,16 +60,20 @@ class _HomePageState extends State<HomePage> {
 
   void _handleInput(String input) {
     setState(() {
-      _outputs.add('> $input'); // Echo input
+      // Echo input
+      _outputs.add('$currentPath > $input');
 
-      if (input.isNotEmpty) _outputs.add(_processCommand(input)); // Add output
+      // Add input to the CLI if it has content
+      if (input.isNotEmpty) _outputs.add(_processCommand(input));
     });
-    _controller.clear(); // Clear input field
 
-    // Scroll to the bottom after adding output
+    // Clear input field
+    _controller.clear();
+
+    // Auto-scroll to input field and give it focus if it has been set again
     Future.delayed(const Duration(milliseconds: 100), () {
       _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
-      _focusNode.requestFocus(); // Refocus on the input field
+      _focusNode.requestFocus();
     });
   }
 
@@ -76,13 +81,21 @@ class _HomePageState extends State<HomePage> {
     switch (command.toLowerCase()) {
       case 'hello':
         return 'Hello, User!';
-      case 'help':
-        return 'Available commands: hello, help, clear';
+      case 'whoami':
+        return "Hi, my name is Max Wilén! \nNice to meet you :)";
       case 'clear':
         setState(() {
           _outputs.clear();
         });
         return '';
+      case 'cd':
+        return 'no functionality as of yet:)';
+      case 'ls':
+        return 'aboutme.txt, contact.txt, courses.txt, projects.txt';
+      case 'ls -a' || 'ls -h' || 'ls -l' || 'ls -ahl':
+        return 'no functionality as of yet:) try the basic command!';
+      case 'help':
+        return 'Available commands: hello, help, clear';
       case '':
         return '';
       default:
@@ -109,7 +122,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Expanded(
                 child: ListView.builder(
-                  controller: _scrollController, // Attach scroll controller
+                  controller: _scrollController,
                   itemCount: _outputs.length + 1, // Add one for the input row
                   itemBuilder: (context, index) {
                     if (index == _outputs.length) {
@@ -117,13 +130,14 @@ class _HomePageState extends State<HomePage> {
                       return Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('> ', style: PortfolioTextStyles.terminalGreen),
+                          // Current input row + static path
+                          Text('$currentPath > ',
+                              style: PortfolioTextStyles.terminalGreen),
                           Expanded(
                             child: TextField(
                               controller: _controller,
-                              focusNode: _focusNode, // Attach focus node
-                              autofocus:
-                                  true, // Ensure the field gets focus initially
+                              focusNode: _focusNode,
+                              autofocus: true,
                               style: PortfolioTextStyles.terminalGreen,
                               decoration: const InputDecoration(
                                 isCollapsed: true,
@@ -139,6 +153,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       );
                     }
+
                     // Otherwise, render output rows. These are the "old" inputs and outputs.
                     return Text(_outputs[index],
                         style: PortfolioTextStyles.terminalGreen);
