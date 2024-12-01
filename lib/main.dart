@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cli_portfolio/constants/text_styles.dart';
+import 'package:cli_portfolio/constants/banners.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
       _focusNode.requestFocus();
     });
 
-    _outputs.add('uhefhsfihsuifsihf');
+    _outputs.add(PortfolioBanners.welcomeBanner);
   }
 
   @override
@@ -81,23 +82,48 @@ class _HomePageState extends State<HomePage> {
     switch (command.toLowerCase()) {
       case 'hello':
         return 'Hello, User!';
+
       case 'whoami':
         return "Hi, my name is Max Wilén! \nNice to meet you :)";
+
+      case 'cd' || 'cd ..' || 'cd ../..':
+        return 'No functionality as of yet:)';
+
+      case 'ls':
+        return 'aboutme.txt, contact.txt, courses.txt, projects.txt';
+      case 'ls -a' || 'ls -h' || 'ls -l' || 'ls -ahl':
+        return 'No functionality as of yet :) Try the basic command!';
+
+      case 'cat aboutme.txt' || 'about':
+        return 'Something about me...';
+      case 'cat contact.txt' || 'contact':
+        return 'Something about me...';
+      case 'cat courses.txt' || 'courses':
+        return 'Something about the courses i have finished...';
+      case 'cat projects.txt' || 'projects':
+        return 'Something about the projects i have worked on...';
+
+      case 'less aboutme.txt' ||
+            'less contact.txt' ||
+            'less courses.txt' ||
+            'less projects.txt':
+        return 'No less command unfortunatly. Try with cat instead.';
+
+      case 'sudo' || 'sudo -su':
+        return 'Nice try ;)';
+
       case 'clear':
         setState(() {
           _outputs.clear();
         });
         return '';
-      case 'cd':
-        return 'no functionality as of yet:)';
-      case 'ls':
-        return 'aboutme.txt, contact.txt, courses.txt, projects.txt';
-      case 'ls -a' || 'ls -h' || 'ls -l' || 'ls -ahl':
-        return 'no functionality as of yet:) try the basic command!';
+
       case 'help':
-        return 'Available commands: hello, help, clear';
+        return 'Try with the commonly used unix commands.\n-> Or you can try the simpler ones: about, contact, courses, projects';
+
       case '':
         return '';
+
       default:
         return 'Unknown command: $command';
     }

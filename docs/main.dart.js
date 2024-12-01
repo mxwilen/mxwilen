@@ -33510,7 +33510,7 @@ return new A.yu(s,r,new A.H9(B.wz,$.ah()),A.Gk())}}
 A.yu.prototype={
 av(){this.aS()
 $.V.k3$.push(new A.a83(this))
-this.d.push("uhefhsfihsuifsihf")},
+this.d.push("\n  _  _ _                _              _                  _  \n | || (_)  __ _ _ _  __| | __ __ _____| |__ ___ _ __  ___| | \n | __ | | / _` | ' \\/ _` | \\ V  V / -_| / _/ _ | '  \\/ -_|_| \n |_||_|_| \\__,_|_||_\\__,_|  \\_/\\_/\\___|_\\__\\___|_|_|_\\___(_) \n  __  __                              _      __  __          \n |  \\/  |_  _   _ _  __ _ _ __  ___  (_)___ |  \\/  |__ ___ __\n | |\\/| | || | | ' \\/ _` | '  \\/ -_) | (_-< | |\\/| / _` \\ \\ /\n |_|  |_|\\_, | |_||_\\__,_|_|_|_\\___| |_/__/ |_|  |_\\__,_/_\\_\\\n         |__/                                                \n\n    New to the command line? Type 'help' to get started :)\n")},
 l(){var s,r=this
 r.e.l()
 s=r.f
@@ -33522,15 +33522,21 @@ YQ(a){var s=this
 s.an(new A.a7Z(s,a))
 s.f.om(B.Jr)
 A.oD(B.aB,new A.a8_(s),t.P)},
-a2m(a){var s=a.toLowerCase()
-if("hello"===s)return"Hello, User!"
-if("whoami"===s)return"Hi, my name is Max Wil\xe9n! \nNice to meet you :)"
-if("clear"===s){this.an(new A.a80(this))
-return""}if("cd"===s)return"no functionality as of yet:)"
-if("ls"===s)return"aboutme.txt, contact.txt, courses.txt, projects.txt"
-if("ls -a"===s||"ls -h"===s||"ls -l"===s||"ls -ahl"===s)return"no functionality as of yet:) try the basic command!"
-if("help"===s)return"Available commands: hello, help, clear"
-if(""===s)return""
+a2m(a){var s="Something about me...",r=a.toLowerCase()
+if("hello"===r)return"Hello, User!"
+if("whoami"===r)return"Hi, my name is Max Wil\xe9n! \nNice to meet you :)"
+if("cd"===r||"cd .."===r||"cd ../.."===r)return"No functionality as of yet:)"
+if("ls"===r)return"aboutme.txt, contact.txt, courses.txt, projects.txt"
+if("ls -a"===r||"ls -h"===r||"ls -l"===r||"ls -ahl"===r)return"No functionality as of yet :) Try the basic command!"
+if("cat aboutme.txt"===r||"about"===r)return s
+if("cat contact.txt"===r||"contact"===r)return s
+if("cat courses.txt"===r||"courses"===r)return"Something about the courses i have finished..."
+if("cat projects.txt"===r||"projects"===r)return"Something about the projects i have worked on..."
+if("less aboutme.txt"===r||"less contact.txt"===r||"less courses.txt"===r||"less projects.txt"===r)return"No less command unfortunatly. Try with cat instead."
+if("sudo"===r||"sudo -su"===r)return"Nice try ;)"
+if("clear"===r){this.an(new A.a80(this))
+return""}if("help"===r)return"Try with the commonly used unix commands.\n-> Or you can try the simpler ones: about, contact, courses, projects"
+if(""===r)return""
 return"Unknown command: "+a},
 S(a){var s=this,r=null,q=s.d.length+1,p=r
 return new A.w_(A.oE(B.bo,new A.en(B.kP,A.ae7(A.b([A.aim(new A.Em(new A.a3g(new A.a81(s),q,!0,!0,!0,r),r,B.aL,!1,s.r,r,p,!1,r,q,B.ae,B.H1,r,B.aw,B.ao,r))],t.E),B.bC,B.io),r),B.ae,!1,r,r,r,r,r,r,r,r,r,r,r,r,new A.a82(s),r,r,r),B.o,r)}}
