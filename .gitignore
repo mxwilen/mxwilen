@@ -1,0 +1,62 @@
+# Flutter generated files
+.dart_tool/
+.packages
+# build/
+flutter_*.json
+pubspec.lock
+
+# User-specific settings
+.idea/
+.vscode/
+*.iml
+
+# iOS
+ios/
+
+# Android
+android/
+
+# Web
+web/.dart_tool/
+web/flutter_export_environment.sh
+
+# macOS
+macos/
+
+# Windows
+windows/
+
+# Linux
+linux/
+
+# Dart analysis
+. analysis_options.yaml
+
+# Coverage
+coverage/
+
+# IntelliJ
+*.ipr
+*.iws
+*.bak
+*.swp
+
+# Android Studio
+*.idea/
+*.log
+local.properties
+
+# VS Code
+.vscode/
+
+# Firebase
+firebase_app_id_file.json
+*.firebaserc
+
+# Miscellaneous
+*.DS_Store
+*.lock
+*.log
+*.tmp
+*.temp
+*.swp
