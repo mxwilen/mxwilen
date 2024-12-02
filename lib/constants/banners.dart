@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PortfolioBanners {
-  static String welcomeBanner = r"""
+  static String welcomeBannerBIG = r"""
 
 +---------------------------------------------+
 |                                             |
@@ -23,6 +23,19 @@ class PortfolioBanners {
 |  - Type 'help' to get started :)            |
 |                                             |
 +---------------------------------------------+
+
+
+""";
+
+  static String welcomeBanner = r"""
+
+
++-------------
++-------------------
++-------------------------
++-------------------------------+
++-------------------------------------
++------------------------------------------
 
 
 """;
