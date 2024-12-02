@@ -33510,7 +33510,7 @@ return new A.yu(s,r,new A.H9(B.wz,$.ah()),A.Gk())}}
 A.yu.prototype={
 av(){this.aS()
 $.V.k3$.push(new A.a83(this))
-this.d.push("\n\n+-------------\n+-------------------\n+-------------------------\n+-------------------------------+\n+-------------------------------------\n+------------------------------------------\n\n\n")},
+this.d.push("\n+-------------------------------------+\n|                                     |\n|   Hi, nice to meet you! I'm Max!    |\n|   -----------------------------     |\n|  Here you can look up my previous   | \n|  work, courses I've taken, and      |\n|   other stuff about me. Welcome!    |\n|   -----------------------------     |\n|    Try the usual UNIX commands.     |\n|                                     |\n|   Or, if you're new to the command  |\n|   line, type one of the following:  |\n|   - help,     (to get help)         |\n|   - about,    (info about me)       |\n|   - contact,  (my contact info)     |\n|   - courses,  (prev. courses)       |\n|   - project   (my projects)         |\n|                                     |\n+-------------------------------------+\n\n")},
 l(){var s,r=this
 r.e.l()
 s=r.f

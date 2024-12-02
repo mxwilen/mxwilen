@@ -29,14 +29,25 @@ class PortfolioBanners {
 
   static String welcomeBanner = r"""
 
-
-+-------------
-+-------------------
-+-------------------------
-+-------------------------------+
-+-------------------------------------
-+------------------------------------------
-
++-------------------------------------+
+|                                     |
+|   Hi, nice to meet you! I'm Max!    |
+|   -----------------------------     |
+|  Here you can look up my previous   | 
+|  work, courses I've taken, and      |
+|   other stuff about me. Welcome!    |
+|   -----------------------------     |
+|    Try the usual UNIX commands.     |
+|                                     |
+|   Or, if you're new to the command  |
+|   line, type one of the following:  |
+|   - help,     (to get help)         |
+|   - about,    (info about me)       |
+|   - contact,  (my contact info)     |
+|   - courses,  (prev. courses)       |
+|   - project   (my projects)         |
+|                                     |
++-------------------------------------+
 
 """;
 }
