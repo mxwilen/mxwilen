@@ -1,10 +1,12 @@
 ### Hi! My name is Max :)
-```bash
+
 Take a look at my CLI styled portfolio
 - Built using flutter
-- Deployed on github pages
-```
-<img src="github/cli-portfolio-screenshot.png" width="600px">
+- Deployed using github pages
+
+>*Check it out [here](https://mxwilen.github.io/mxwilen/)*
+
+<img src="github/cli-portfolio-screenshot.png" width="500px">
 
 <!--
 **mxwilen/mxwilen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
