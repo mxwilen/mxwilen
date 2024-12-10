@@ -96,15 +96,18 @@ class _HomePageState extends State<HomePage> {
       case 'whoami':
         return "Hi, my name is Max Wilén! \nNice to meet you :)";
 
+      case 'pwd':
+        return currentPath;
+
       case 'cd' || 'cd ..' || 'cd ../..':
         return 'No functionality as of yet:)';
 
       case 'ls':
-        return 'aboutme.txt, contact.txt, courses.txt, projects.txt';
+        return 'about.txt, contact.txt, courses.txt, projects.txt';
       case 'ls -a' || 'ls -h' || 'ls -l' || 'ls -ahl':
         return 'No functionality as of yet:) Try with "ls" ';
 
-      case 'cat aboutme.txt':
+      case 'cat about.txt':
         _outputs.add(PortfolioBanners.aboutBanner);
         return '';
       case 'about':
@@ -132,7 +135,7 @@ class _HomePageState extends State<HomePage> {
         _presentFriendlyBanner(PortfolioBanners.projectsBanner);
         return '';
 
-      case 'less aboutme.txt' ||
+      case 'less about.txt' ||
             'less contact.txt' ||
             'less courses.txt' ||
             'less projects.txt':
@@ -141,6 +144,13 @@ class _HomePageState extends State<HomePage> {
       case 'sudo' || 'sudo -su':
         return 'Nice try ;)';
 
+      case 'start':
+        setState(() {
+          _outputs.clear();
+          _outputs.add(PortfolioBanners.welcomeBanner);
+        });
+        return '';
+
       case 'clear':
         setState(() {
           _outputs.clear();
@@ -148,7 +158,7 @@ class _HomePageState extends State<HomePage> {
         return '';
 
       case 'help':
-        return 'Try with the commonly used unix commands.\n-> Or you can try the simpler ones: about, contact, courses, projects';
+        return 'Try with the commonly used unix commands.\n-> Or you can try the simpler ones: about, contact, courses, projects, start';
 
       case 'exit':
         return 'Bye! See you around :)';

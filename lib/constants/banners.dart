@@ -28,42 +28,42 @@ class PortfolioBanners {
 """;
 
   static String welcomeBanner = r"""
-+-------------------------------------+
-|                                     |
-|   Hi, nice to meet you! I'm Max!    |
-|   -----------------------------     |
-|  Here you can look up my previous   | 
-|  work, courses I've taken, and      |
-|   other stuff about me. Welcome!    |
-|   -----------------------------     |
-|    Try the usual UNIX commands.     |
-|                                     |
-|   Or, if you're new to the command  |
-|   line, type one of the following:  |
-|   - about,    (info about me)       |
-|   - contact,  (my contact info)     |
-|   - courses,  (prev. courses)       |
-|   - project   (my projects)         |
-|   -----------------------------     |
-|  ps. This is a work in progress :)  |
-+-------------------------------------+
-""";
++-----------------------------------+
+|                                   |
+|  Hi, nice to meet you! I'm Max!   |
+|  -----------------------------    |
+| Here you can look up my previous  |  
+| work, courses I've taken, and     |
+|  other stuff about me. Welcome!   |
+|  -----------------------------    |
+|   Try the usual UNIX commands.    |
+|                                   |
+|  Or, if you're new to the command |
+|  line, type one of the following: |
+|  - about,    (info about me)      |
+|  - contact,  (my contact info)    |
+|  - courses,  (prev. courses)      |
+|  - projects  (my projects)        |
+|  - start     (reset page)         |
+|  -----------------------------    |
+| ps. This is a work in progress :) |
++-----------------------------------+""";
 
   static String contactBanner = r"""
 
-+-------------------------------------+
-|                                     |
-|         Contact Information         |
-|         -------------------         |
-|   Here are a few ways to reach me:  |
-|                                     |
-|  Email:    mxwilen@outlook.com      |
-|  LinkedIn: linkedin.com/in/maxwilen |
-|  GitHub:   github.com/mxwilen       |
-|                                     |
-|   I'm always happy to connect!      |
-|                                     |
-+-------------------------------------+
++------------------------------------+
+|                                    |
+|        Contact Information         |
+|        -------------------         |
+|  Here are a few ways to reach me:  |
+|                                    |
+| Email:    mxwilen@outlook.com      |
+| LinkedIn: linkedin.com/in/maxwilen |
+| GitHub:   github.com/mxwilen       |
+|                                    |
+|    I'm always happy to connect!    |
+|                                    |
++------------------------------------+
 """;
 
   static String aboutBanner = r"""
@@ -115,8 +115,7 @@ Other
 
   static String coursesBanner = r"""
 
-Here are the most prominent of the programming 
-course I've taken over the years :)
+Here are the most prominent of the programming course I've taken over the years :)
 -------------------------------------
 
 == Security Focus ==
