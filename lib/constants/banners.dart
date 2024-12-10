@@ -68,19 +68,14 @@ class PortfolioBanners {
 
   static String aboutBanner = r"""
 
-I'm a Master's student specializing in Cybersecurity, building on a solid foundation in 
-Computer Science and Software Engineering. 
+I'm a Master's student specializing in Cybersecurity, building on a solid foundation in Computer Science and Software Engineering. 
 
-Throughout my studies, I've developed a strong interest in understanding and designing 
-secure systems — a field I am eager to continue learning more about!
+Throughout my studies, I've developed a strong interest in understanding and designing secure systems — a field I am eager to continue learning more about!
 
-My coursework has given me the opportunity to explore topics such as penetration testing, 
-digital forensics, vulnerability analysis, and secure software development. 
-I'm particularly drawn to answering the questions "How?", "Why?", and "When?", which 
-lie at the heart of these fields.
+My coursework has given me the opportunity to explore topics such as penetration testing, digital forensics, vulnerability analysis, and secure software development. 
+I'm particularly drawn to answering the questions "How?", "Why?", and "When?", which lie at the heart of these fields.
 
-While I'm still learning new skills and developing as a professional, I aim to bridge 
-the gap between security and the ease of use.
+While I'm still learning new skills and developing as a professional, I aim to bridge the gap between security and the ease of use.
 
 If you'd like to know more, feel free to explore some of the other sections:
 - courses 
@@ -125,7 +120,7 @@ course I've taken over the years :)
 -------------------------------------
 
 == Security Focus ==
-TDDE61 - Ethical Hacking
+TDDE61   - Ethical Hacking
 TSIT14 - Digital Forensics and Incident Response
 TDDC90 - Software Security
 TSIT02 - Computer Security
