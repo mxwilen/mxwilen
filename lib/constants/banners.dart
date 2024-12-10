@@ -68,29 +68,21 @@ class PortfolioBanners {
 
   static String aboutBanner = r"""
 
-I'm a Master's student specializing in Cyber-
-security, building on a solid foundation in 
+I'm a Master's student specializing in Cybersecurity, building on a solid foundation in 
 Computer Science and Software Engineering. 
 
-Throughout my studies, I've developed a strong 
-interest in understanding and designing secure 
-systems — a field I am eager to continue 
-learning more about!
+Throughout my studies, I've developed a strong interest in understanding and designing 
+secure systems — a field I am eager to continue learning more about!
 
-My coursework has given me the opportunity to 
-explore topics such as penetration testing, 
-digital forensics, vulnerability analysis, and 
-secure software development. I'm particularly 
-drawn to answering the questions "How?", "Why?"
-, and "When?", which lie at the heart of these 
-fields.
+My coursework has given me the opportunity to explore topics such as penetration testing, 
+digital forensics, vulnerability analysis, and secure software development. 
+I'm particularly drawn to answering the questions "How?", "Why?", and "When?", which 
+lie at the heart of these fields.
 
-While I'm still learning new skills and 
-developing as a professional, I aim to bridge 
+While I'm still learning new skills and developing as a professional, I aim to bridge 
 the gap between security and the ease of use.
 
-If you'd like to know more, feel free to 
-explore some of the other sections:
+If you'd like to know more, feel free to explore some of the other sections:
 - courses 
 - projects
 - contact 
@@ -170,12 +162,20 @@ HackTheBox
 Software Development Projects
 -------------------
 Web-Based Discussion Forum
-  - Technologies: Flask, PostgreSQL, JavaScript, nginx
+  - Technologies: 
+    - Flask, 
+    - PostgreSQL, 
+    - JavaScript, 
+    - nginx
   - Deployed to AWS with secure database connections using AWS Secrets Manager
 
 GitHub Repository Browser [School]
-  - Technologies: Flutter, GraphQL
+  - Technologies: 
+    - Flutter, 
+    - GraphQL
 
 Android Client for Web-Based Discussion Forum [School]
-  - Technologies: Android studio, flask""";
+  - Technologies: 
+    - Android studio, 
+    - flask""";
 }
