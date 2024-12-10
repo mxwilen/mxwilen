@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Hi! I'm Max:)",
+      title: "My name is Max",
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black,
@@ -78,6 +78,16 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void _presentFriendlyBanner(String banner) {
+    setState(() {
+      _outputs.clear();
+      _outputs.add(banner);
+      _outputs.add("");
+      _outputs.add("----------------------");
+      _outputs.add("Type 'help' if stuck:)");
+    });
+  }
+
   String _processCommand(String command) {
     switch (command.toLowerCase()) {
       case 'hello':
@@ -92,16 +102,35 @@ class _HomePageState extends State<HomePage> {
       case 'ls':
         return 'aboutme.txt, contact.txt, courses.txt, projects.txt';
       case 'ls -a' || 'ls -h' || 'ls -l' || 'ls -ahl':
-        return 'No functionality as of yet :) Try the basic command!';
+        return 'No functionality as of yet:) Try with "ls" ';
 
-      case 'cat aboutme.txt' || 'about':
-        return 'Something about me...';
-      case 'cat contact.txt' || 'contact':
-        return 'Something about me...';
-      case 'cat courses.txt' || 'courses':
-        return 'Something about the courses i have finished...';
-      case 'cat projects.txt' || 'projects':
-        return 'Something about the projects i have worked on...';
+      case 'cat aboutme.txt':
+        _outputs.add(PortfolioBanners.aboutBanner);
+        return '';
+      case 'about':
+        _presentFriendlyBanner(PortfolioBanners.aboutBanner);
+        return '';
+
+      case 'cat contact.txt':
+        _outputs.add(PortfolioBanners.contactBanner);
+        return '';
+      case 'contact':
+        _presentFriendlyBanner(PortfolioBanners.contactBanner);
+        return '';
+
+      case 'cat courses.txt':
+        _outputs.add(PortfolioBanners.coursesBanner);
+        return '';
+      case 'courses':
+        _presentFriendlyBanner(PortfolioBanners.coursesBanner);
+        return '';
+
+      case 'cat projects.txt':
+        _outputs.add(PortfolioBanners.projectsBanner);
+        return '';
+      case 'projects':
+        _presentFriendlyBanner(PortfolioBanners.projectsBanner);
+        return '';
 
       case 'less aboutme.txt' ||
             'less contact.txt' ||
@@ -120,6 +149,9 @@ class _HomePageState extends State<HomePage> {
 
       case 'help':
         return 'Try with the commonly used unix commands.\n-> Or you can try the simpler ones: about, contact, courses, projects';
+
+      case 'exit':
+        return 'Bye! See you around :)';
 
       case '':
         return '';

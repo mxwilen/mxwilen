@@ -1,6 +1,6 @@
 ### Hi! My name is Max :)
 ```bash
-Take a look at my CLI styled webpage
+Take a look at my CLI styled portfolio
 - Built using flutter
 - Deployed on github pages
 ```
